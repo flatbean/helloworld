@@ -10,3 +10,4 @@ if __name__ == '__main__':
     print('Hello, I am first python script on Github')
     print('你好，我是在github上的第一个python程序!\n')
     
+    print('你好，我里是做的第一个版本修正修改。')  
