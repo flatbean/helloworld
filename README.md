@@ -1,8 +1,6 @@
-# helloworld
-This is a test hello world repository of flatbean. Since Jan,11.2019
+# 这里是 ph-pages 分支
 
-We use this repository to practice Python.
-
-ip.py 程序是一个查询IP地址来源地的Python小程序，分别调用的是国内和国外的两个免费查询接口。
-
-helloworld.py 程序是一个演示程序，
+<p>
+这个分支是展示项目网页的，访问方法是 http://flatbean.github.io/helloworld
+  
+  
