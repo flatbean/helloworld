@@ -1,52 +1,298 @@
-#coding=utf-8
-'''
-Created on Dec.18 2018
-@author: flatbean@qq.com
-Flatbean Software Studio.
-使用方法 python ip.py 219.139.198.198
-python 3.7.1 测试通过
-'''
-import sys
-import requests
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home </title>
 
-def main(argv):
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Karla:400,400i,700%7CLato:300,400,400i,700' rel='stylesheet'>
 
-    url = 'http://freeapi.ipip.net/'   #中文免费IP地址查询接口
-    url2 = 'http://ip-api.com/json/'   #外国网站IP地址查询接口
-    args = sys.argv[1]
-    url=url+format(args)
-    url2 = url2 + format(args)
-    response = requests.get(url)
-    response2 = requests.get(url2)
+  <!-- Css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/font-icons.css" />
+  <link rel="stylesheet" href="css/sliders.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-    str=response.text.replace('\"','')
-    str=str.replace('[','')
-    str=str.replace(']','')
-    str=str.replace(' ','')
-    str=str.split(",")
-    print("****************************************")
-    print("您查询的IP地址 %s 来源地是："%args)
-    print("国家：%s"%(str[0]))
-    print("省份：%s"%(str[1]))
-    print("城市：%s"%(str[2]))
-    print("区域：%s"%(str[3]))
-    str[4] = str[4].replace('\n', '')
-    print("运营商：%s"%(str[4]))
-    print("数据来源<www.ipip.net免费查询接口>")
-    print("****************************************")
-    strpp={}
-    strpp=response2.json()
-    print("\n")
-    print("您查询的IP地址 %s 来源地是："%(strpp.get('query')))
-    print("国家：%s"%(strpp.get('country')))
-    print("城市：%s"%(strpp.get('city')))
-    print("经纬度坐标：%s,%s"%(strpp.get('lat'),strpp.get('lon')))
-    print("运营商编号：%s"%(strpp.get('as')))
-    print("ISP服务商：%s"%(strpp.get('isp')))
-    print("数据来源<www.ip-api.com免费查询接口>,\n程序设计：Flatbean Software Studio.")
-    print("****************************************")
-#    print(strpp.keys())
-#    print(strpp.values())
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-if __name__ == "__main__":
-    main(sys.argv)
+</head>
+<body>
+<div class="adcenter"><script src="http://www.cssmoban.com/include/new/ggad2_728x90.js"></script></div>
+
+  <!-- Preloader -->
+  <div class="loader-mask">
+    <div class="loader">
+      "Loading..."
+    </div>
+  </div>
+
+  <main class="main-wrapper">
+
+    <!-- Navigation -->
+    <header class="nav nav--transparent nav--always-fixed nav--sticky-on-mobile">
+      <div class="nav__holder nav__holder--no-line" id="sticky-nav">
+
+        <div class="container-fluid container-semi-fluid">
+          <div class="flex-parent">
+
+            <div class="nav__header clearfix">
+              <!-- Logo -->
+              <div class="logo-wrap">
+                <a href="index.html" class="logo__link">
+                  <img class="logo logo--dark" src="img/logo_dark.png" alt="logo">
+                  <img class="logo logo--light" src="img/logo_light.png" alt="logo">
+                </a>
+              </div>
+            </div> <!-- end nav-header -->
+
+            <!-- Nav Open Icon -->
+            <div class="nav__icon-wrap">
+              <div id="nav__icon" class="nav__icon">
+                <div class="nav__icon__inner">
+                  <a href="#" id="nav__icon__trigger" class="nav__icon__trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+          </div> <!-- end flex-parent -->
+        </div> <!-- end container -->
+      </div>
+
+
+      <!-- Fullscreen Menu -->
+      <div class="nav__overlay" id="nav__overlay">
+        <div class="nav__overlay__menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="../select_demo/index.html">Demos</a></li>
+          </ul>
+        </div>
+
+        <!-- Nav Close Icon -->
+        <div class="nav__icon-wrap">
+          <div class="nav__icon">
+            <div class="nav__icon__inner">
+              <a href="#" id="nav__icon__close" class="nav__icon__trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header> <!-- end navigation -->
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网站建设</a></div>
+
+    <div class="content-wrapper oh">
+
+      <!-- Fullpage -->
+      <div id="fullpage" class="fullscreen-img">
+
+        <!-- Hero -->
+        <div class="section hero bg-img" style="background-image: url(img/hero/hero_6_1.jpg);">
+          <div class="container">
+            <div class="hero__outer">
+              <div class="hero__inner">
+                <h3 class="hero__subtitle--uppercase">creative agency</h3>
+                <h1 class="hero__title hero--boxed--md hero--bold">We craft digital experience with knowledge, passion and intuitive ideas.</h1>
+              </div>
+            </div>
+
+            <!-- Partners -->
+            <div class="partners partners--overlay">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-3 col-xxs-6">
+                    <a href="#">
+                      <img src="img/partners/partner_logo_light_1.png" alt="">
+                    </a>
+                  </div>
+                  <div class="col-xs-3 col-xxs-6">
+                    <a href="#">
+                      <img src="img/partners/partner_logo_light_2.png" alt="">
+                    </a>
+                  </div>
+                  <div class="col-xs-3 col-xxs-6">
+                    <a href="#">
+                      <img src="img/partners/partner_logo_light_3.png" alt="">
+                    </a>
+                  </div>
+                  <div class="col-xs-3 col-xxs-6">
+                    <a href="#">
+                      <img src="img/partners/partner_logo_light_4.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end partners -->
+
+
+          </div>          
+        </div> <!-- end hero -->
+
+        <!-- Services -->
+        <div class="section hero bg-img" style="background-image: url(img/hero/hero_6_2.jpg)">
+          <div class="container pt-sm-60">
+
+            <div class="heading-row text-center">
+              <h2 class="heading heading--lg">What we do</h2>
+              <p class="subheading white hidden-sm hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet</p>
+            </div>
+
+            <div class="row">
+              <div id="owl-services-slider" class="owl-carousel owl-theme">
+
+                <div class="feature feature--transparent text-center">
+                  <div class="feature__base feature--border">
+                    <a href="#" class="feature__icon-holder">
+                      <i class="pe-7s-cloud feature__icon"></i>
+                    </a>
+                    <div class="feature__text">
+                      <h3 class="feature__title bottom-line">iOS Apps</h3>
+                      <p class="feature__text__paragraph">Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                  </div>
+                </div> <!-- end feature item -->
+
+                <div class="feature feature--transparent text-center">
+                  <div class="feature__base feature--border">
+                    <a href="#" class="feature__icon-holder">
+                      <i class="pe-7s-diamond feature__icon"></i>
+                    </a>
+                    <div class="feature__text">
+                      <h3 class="feature__title bottom-line">Web Design</h3>
+                      <p class="feature__text__paragraph">Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                  </div>
+                </div> <!-- end feature item -->
+
+                <div class="feature feature--transparent text-center">
+                  <div class="feature__base feature--border">
+                    <a href="#" class="feature__icon-holder">
+                      <i class="pe-7s-shopbag feature__icon"></i>
+                    </a>
+                    <div class="feature__text">
+                      <h3 class="feature__title bottom-line">eCommerce</h3>
+                      <p class="feature__text__paragraph">Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                  </div>
+                </div> <!-- end feature item -->
+
+                <div class="feature feature--transparent text-center">
+                  <div class="feature__base feature--border">
+                    <a href="#" class="feature__icon-holder">
+                      <i class="pe-7s-graph2 feature__icon"></i>
+                    </a>
+                    <div class="feature__text">
+                      <h3 class="feature__title bottom-line">Marketing</h3>
+                      <p class="feature__text__paragraph">Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                  </div>
+                </div> <!-- end feature item -->
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- end services -->
+
+        <!-- Project 1 -->
+        <div class="section hero bg-img" style="background-image: url(img/hero/hero_6_3.jpg)">
+          <div class="container-fluid no-padding">
+            <div class="fullpage-project-body">
+              <div class="work-item__description">
+                <h3 class="work-item__title"><a href="#">Design Workshop</a></h3>
+                <span class="work-item__text">
+                  Product design for professional clients.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end project 1 -->
+
+        <!-- Project 2 -->
+        <div class="section hero bg-img" style="background-image: url(img/hero/hero_6_4.jpg)">
+          <div class="container-fluid no-padding">
+            <div class="fullpage-project-body">
+              <div class="work-item__description">
+                <h3 class="work-item__title"><a href="#">Frozen Forest</a></h3>
+                <span class="work-item__text">
+                  Photo session of the winter outfit.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end project 2 -->
+
+        <!-- Contact -->
+        <div class="section hero bg-img" style="background-image: url(img/hero/hero_6_5.jpg)">
+          <div class="container pt-sm-60">
+            <div class="hero__outer">
+              <div class="hero__inner text-center">
+
+                <div class="heading-row text-center">
+                  <h2 class="heading heading--lg">Contact Us</h2>
+                  <p class="subheading white hidden-xs">Feel free to contact us or visit us at our office anytime.
+                  </p>
+                </div>
+
+                <div class="contact-item">
+                  <address>California CA Clark Inc. 48793 Star Apple</address>
+                  <p>More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                </div> <!-- end address -->
+
+                <div class="contact-item">
+                  <span class="contact-item__title">Phone:</span>
+                  <a href="tel:+64-93-310-70-50" class="contact-item__phone">+64 93 310 70 50</a>              
+                </div> <!-- end phone -->
+
+                <div class="contact-item">
+                  <span class="contact-item__title">Email:</span>
+                  <a href="mailto:hello@support.com" class="contact-item__email">hello@support.com</a>
+                </div> <!-- end email -->
+
+                <div class="social-icons social-icons--nobase social-icons--white mt-50">
+                  <a href="#"><i class="ui-twitter"></i></a>
+                  <a href="#"><i class="ui-facebook"></i></a>
+                  <a href="#"><i class="ui-linkedin"></i></a>
+                  <a href="#"><i class="ui-instagram"></i></a>
+                </div>
+
+              </div>           
+            </div>
+          </div>
+        </div> <!-- end contact -->
+      </div> <!-- end fullpage -->
+
+
+    </div> <!-- end content wrapper -->
+  </main> <!-- end main wrapper -->
+  
+
+  <!-- jQuery Scripts -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>  
+  <script type="text/javascript" src="js/scripts.js"></script>
+    
+</body>
+</html>
