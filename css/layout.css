@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+html,body{
+    background-image: url(img/bg/body-bg.gif);
+}
+.full-container{ /* full container */
+    width:auto;
+}
+.container{ /* main container */
+    width:1120px;
+    height: auto;
+    margin: 0 auto;
+}
+.module-container{
+    /* 属性设置在module.css中. */
+}
+/* 浮动位置 */
+.fl{ float: left; }
+.fr{ float: right; }
+.clear{ clear: both; }
+.fl,.fr{ display: block; }
+.clear-fix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clear-fix {height: 1%;}
+.main{
+    height: auto;
+    background-color: #ffffff;
+}
+.header{
+    height: 86px;
+}
+.footer{
+    height: 342px;
+}
+.header,.footer{
+    background: url(img/bg/bg9.png) repeat;
+}
+.copyright{
+    height: 16px;
+    line-height: 16px;
+    background-color: #252525;
+    font-size: 12px;
+    color:#959595;
+    padding: 6px 0px;
+    font-family: "黑体";
+}
+/* 模块标题 */
+.module{
+    height: 130px;
+    background: url(img/bg/title-bg.png) repeat-x;
+    margin-bottom: 15px;
+}
+.module.nm{
+    margin-bottom: 0px;
+}
+.module-name{
+    height: 46px;
+    font-size: 42px;
+    position: relative;
+    top: 43px;
+    background: url(img/title.png) no-repeat;
+}
+.module-name.work{ background-position: 50% -98px; }
+.module-name.services{ background-position: 50% -47px; }
+.module-name.experience{ background-position: 50% -150px; }
+.module-name.about{ background-position: 50% 1px; }
+/* 模块小标题 */
+.module-title{
+    height: auto;
+    border: 0px none;
+    border-bottom: 1px solid #e9e8e7;
+    /*margin-bottom: 20px;*/
+}
+.module-title-cn{ /* 中文样式 */
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 14px;
+    font-weight: 900;
+    color:#4a4a4a;
+    padding: 5px 10px;
+    background-color: #e9e8e7;
+    font-family: "宋体";
+}
+.module-title-en{ /* 英文样式 */
+    font-size: 12px;
+    color:#4a4a4a;
+    font-family: Arial;
+    font-weight: 100;
+    margin-left: 5px;
+}
+.back-top{
+    width: 40px;
+    height: 115px;
+    background: url(img/top.png) no-repeat center center;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+}
